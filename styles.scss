@@ -1,0 +1,28 @@
+$background: #333;
+$box_1_color : #aaa;
+
+
+
+body {
+  margin: 0;
+}
+
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: $background;
+  display: flex;
+  flex-direction: row;
+}
+
+.box1{
+  width: 200px;
+  height: 100px;
+  background-color: $box_1_color;
+}
+
+.box2{
+  width: 200px;
+  height: 100px;
+  background-color: $box_1_color;
+}
