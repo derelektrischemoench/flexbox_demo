@@ -5,6 +5,7 @@ $box_1_color : #aaa;
 $buttons: #bb2233;
 $lightgrey:#aaa;
 $fontstack:'Open sans', sans-serif;
+$row_wrapper: #fff;
 
 
 html{
@@ -36,12 +37,6 @@ body {
   box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
 }
 
-/*.code>p:after {
-  content: "moep";
-}
-*/
-
-
 .code {
   width: 60%;
   height: 250px;
@@ -67,7 +62,7 @@ body {
   width: 450px;
   height: 450px;
   background: $background;
-  border:3px solid white;
+  border:5px solid $row_wrapper;
   align-self: center;
 
 }
@@ -148,8 +143,8 @@ body {
   margin-right: 10px;
 }
 
-.grau {
-  background: $box_1_color;
+.weiß {
+  background: $row_wrapper;
 }
 
 .rot {

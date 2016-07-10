@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "https://fonts.googleapis.com/css?family=Cutive+Mono";
 @import "https://fonts.googleapis.com/css?family=Open+Sans:400,600";
 html {
@@ -24,10 +25,6 @@ body {
   -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75); }
 
-/*.code>p:after {
-  content: "moep";
-}
-*/
 .code {
   width: 60%;
   height: 250px;
@@ -48,7 +45,7 @@ body {
   width: 450px;
   height: 450px;
   background: #333;
-  border: 3px solid white;
+  border: 5px solid #fff;
   align-self: center; }
 
 .isFlexRow {
@@ -110,8 +107,8 @@ body {
   height: 20px;
   margin-right: 10px; }
 
-.grau {
-  background: #aaa; }
+.weiß {
+  background: #fff; }
 
 .rot {
   background: #bb2233; }

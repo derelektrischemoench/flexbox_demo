@@ -4,7 +4,7 @@
 });*/
 
 $(document).ready(function(){
-   $('.code p').prepend("{display:block}");
+   $('.code p').prepend("#row_wrapper:{display:block}");
 
 
     $('.button1').click(function () {
@@ -12,10 +12,10 @@ $(document).ready(function(){
         $('#row_wrapper').toggleClass('isFlexRow');
 
         if($('#row_wrapper').hasClass('isFlexRow')){
-            $('.code ').prepend("<p>{display:flex}</p>");
+            $('.code ').prepend("<p>#row_wrapper:{display:flex}</p>");
         }
 
-        else ($('.code').prepend("<p>{display:block}</p>"));
+        else ($('.code').prepend("<p>#row_wrapper:{display:block}</p>"));
 
 
         
