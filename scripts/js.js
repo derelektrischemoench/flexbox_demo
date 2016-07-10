@@ -4,10 +4,20 @@
 });*/
 
 $(document).ready(function(){
-    $("<p>asdasd</p>").insertAfter($('.code span'));
+   $('.code p').prepend("{display:block}");
+
 
     $('.button1').click(function () {
+        $('.code p').remove();
         $('#row_wrapper').toggleClass('isFlexRow');
+
+        if($('#row_wrapper').hasClass('isFlexRow')){
+            $('.code ').prepend("<p>{display:flex}</p>");
+        }
+
+        else ($('.code').prepend("<p>{display:block}</p>"));
+
+
         
         /*if($('#row_wrapper').hasClass('isFlexRow')){
             $('.code p').empty();
