@@ -1,3 +1,6 @@
+@import 'https://fonts.googleapis.com/css?family=Cutive+Mono';
+
+
 $background: #333;
 $box_1_color : #aaa;
 $buttons: #bb2233;
@@ -23,6 +26,26 @@ body {
   background: $buttons;
   height: 300px;
   width: 100%;
+  justify-content: center;
+}
+
+.code {
+  width: 60%;
+  height: 250px;
+  background: $background;
+  align-self: center;
+  color:white;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 2em;
+  display: flex;
+
+}
+
+.code>p {
+  align-self: center;
+  text-align: center;
+  width: 100%;
+
 }
 
 /* begin touching from here */
