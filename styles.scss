@@ -1,4 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Cutive+Mono';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,600';
 $background: #333;
 $box_1_color : #aaa;
 $buttons: #bb2233;
@@ -29,6 +30,12 @@ body {
   width: 100%;
   justify-content: center;
 }
+
+/*.code>p:after {
+  content: "moep";
+}
+*/
+
 
 .code {
   width: 60%;
@@ -103,4 +110,6 @@ body {
   color:white;
   width: 150px;
   text-align: center;
+  font-family:'Open sans', sans-serif;
+  font-weight:600;
 }
