@@ -19,7 +19,10 @@ body {
   background: #bb2233;
   height: 300px;
   width: 100%;
-  justify-content: center; }
+  justify-content: center;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75); }
 
 /*.code>p:after {
   content: "moep";
@@ -45,7 +48,7 @@ body {
   width: 450px;
   height: 450px;
   background: #333;
-  border: 3px solid #bb2233;
+  border: 3px solid white;
   align-self: center; }
 
 .isFlexRow {
@@ -85,15 +88,35 @@ body {
   width: 150px;
   text-align: center;
   font-family: 'Open sans', sans-serif;
-  font-weight: 600; }
+  font-weight: 600;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75); }
 
 .button2, .button3 {
   margin-top: 20px; }
 
 .legende {
-  border: 4px solid #bb2233;
+  background: #333;
   font-family: "Open sans", sans-serif;
   color: white;
-  padding: 0 25px; }
+  padding: 0 25px;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75); }
+
+.farbkasten {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px; }
+
+.grau {
+  background: #aaa; }
+
+.rot {
+  background: #bb2233; }
+
+.legend_item_wrapper {
+  display: flex; }
 
 /*# sourceMappingURL=styles.css.map */
