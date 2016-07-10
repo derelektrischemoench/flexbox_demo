@@ -5,6 +5,10 @@
 
 $(document).ready(function(){
     $('.button1').click(function () {
-        $('.box1').toggleClass('blue');
-    })
+        $('#row_wrapper').toggleClass('isFlexRow');
+    });
+
+    $('.button2').click(function () {
+        $('#column_wrapper').toggleClass('isFlexColumn');
+    });
 });

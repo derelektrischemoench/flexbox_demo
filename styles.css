@@ -6,24 +6,35 @@ body {
 
 /*DON'T TOUCH THIS!*/
 #flex_container {
-  display: flex;
-  justify-content: center;
   margin-top: 50px;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center; }
 
+.activecode {
+  display: flex;
+  background: #bb2233;
+  height: 300px;
+  width: 100%; }
+
+/* begin touching from here */
 #row_wrapper {
-  width: 650px;
-  height: 650px;
-  background: #333;
+  width: 450px;
+  height: 450px;
+  background: #333; }
+
+.isFlexRow {
   display: flex;
   flex-direction: row;
   justify-content: center; }
 
 #column_wrapper {
+  border: 3px dashed white; }
+
+.isFlexColumn {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  border: 3px dashed white; }
+  justify-content: center; }
 
 .box1 {
   width: 100px;
