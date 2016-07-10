@@ -1,6 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=Cutive+Mono";
 html {
-  background: #b3b3b3; }
+  background: #aaa; }
 
 body {
   margin: 0; }
@@ -38,7 +38,8 @@ body {
 #row_wrapper {
   width: 450px;
   height: 450px;
-  background: #333; }
+  background: #333;
+  border: 3px solid #bb2233; }
 
 .isFlexRow {
   display: flex;
@@ -46,7 +47,7 @@ body {
   justify-content: center; }
 
 #column_wrapper {
-  border: 3px dashed white; }
+  border: 3px solid #333; }
 
 .isFlexColumn {
   display: flex;

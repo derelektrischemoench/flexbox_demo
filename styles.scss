@@ -2,8 +2,11 @@
 $background: #333;
 $box_1_color : #aaa;
 $buttons: #bb2233;
+$lightgrey:#aaa;
+
+
 html{
-  background: lighten($background, 50%);
+  background: $lightgrey;
 }
 
 body {
@@ -52,6 +55,7 @@ body {
   width: 450px;
   height: 450px;
   background: $background;
+  border:3px solid $buttons;
 }
 
 .isFlexRow {
@@ -63,7 +67,7 @@ body {
 
 
 #column_wrapper {
-  border: 3px dashed white;
+  border: 3px solid $background;
 }
 
 .isFlexColumn {
