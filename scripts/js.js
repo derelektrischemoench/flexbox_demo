@@ -6,10 +6,13 @@ $(document).ready(function(){
     var cwdf = "#column_wrapper:{display:flex}";
     var fdc = "#row_wrapper:{flex-direction:column}";
     var rw = "#row-wrapper";
+    var cw = "#column_wrapper";
 
 
 
-   $('.code p').prepend(rwdb + "<br>" + cwdb);
+   $('.code p').prepend(rw + "{display:" + $('#row_wrapper').css('display') + "} <br>" +
+                        cw + "{display:" + $('#column_wrapper').css('display') + "}");
+
 
     $('.button1').click(function () {
         $('.code p').remove();
@@ -25,10 +28,10 @@ $(document).ready(function(){
 
         if($('#row_wrapper').hasClass('isFlexRow')){
             //TODO: this below displays the css dynamically
-            $('.code ').prepend("<p>" + rw + "<br>" + $('#row_wrapper').css('display') + "</p>");
+            $('.code ').prepend("<p>" + rw + "{display:"+ $('#row_wrapper').css('display') + "}" + "</p>");
         }
 
-        else ($('.code').prepend("<p>" + rw + "<br>" + $('#row_wrapper').css('display') + "</p>"));
+        else ($('.code ').prepend("<p>" + rw + "{display:"+ $('#row_wrapper').css('display') + "}" + "</p>"));
 
     });
 

@@ -38,7 +38,7 @@ body {
 }
 
 .code {
-  width: 60%;
+  width: 80%;
   height: 250px;
   background: $background;
   align-self: center;
@@ -47,13 +47,15 @@ body {
   font-size: 2em;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 
 }
 
 .code>p {
   align-self: center;
-  text-align: center;
+  text-align: left;
   width: 100%;
+  padding-left: 30px;
 
 }
 
