@@ -8,11 +8,8 @@ $(document).ready(function(){
     var rw = "#row_wrapper";
     var cw = "#column_wrapper";
 
-
-
    $('.code p').prepend(rw + "{display:" + $('#row_wrapper').css('display') + "} <br>" +
                         cw + "{display:" + $('#column_wrapper').css('display') + "}");
-
 
     $('.button1').click(function () {
         $('.code p').remove();
@@ -59,21 +56,4 @@ $(document).ready(function(){
         }
 
     });
-
-
-
-
-    //only allow button 3 to work if button 1 is active aka the container is flex
-    if ($('.button1').hasClass('flextoggle_active')){
-        $('.button3').click(function(){
-            {
-                //do stuff
-                $('#row_wrapper').className.remove();
-
-                //$('.code p').remove();
-                //$('.code').prepend("<p>" + rwdf + "<br>" +"column-wrapper{flex-direction:column}" +  "</p>");
-            }
-        });
-
-    }
 });
