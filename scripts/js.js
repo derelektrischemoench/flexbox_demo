@@ -5,6 +5,7 @@ $(document).ready(function(){
     var cwdb = "#column_wrapper:{display:block}";
     var cwdf = "#column_wrapper:{display:flex}";
     var fdc = "#row_wrapper:{flex-direction:column}";
+    var rw = "#row-wrapper";
 
 
 
@@ -23,10 +24,11 @@ $(document).ready(function(){
         }
 
         if($('#row_wrapper').hasClass('isFlexRow')){
-            $('.code ').prepend("<p>" + rwdf + "<br>" + cwdb + "</p>");
+            //TODO: this below displays the css dynamically
+            $('.code ').prepend("<p>" + rw + "<br>" + $('#row_wrapper').css('display') + "</p>");
         }
 
-        else ($('.code').prepend("<p>" + rwdb + "<br>" + cwdb + "</p>"));
+        else ($('.code').prepend("<p>" + rw + "<br>" + $('#row_wrapper').css('display') + "</p>"));
 
     });
 
@@ -42,6 +44,8 @@ $(document).ready(function(){
             else {
                 $('.code p').remove();
                 $('.code').prepend("<p>" + rwdf + "<br>" + cwdb + "</p>");
+
+
             }
         }
 
@@ -51,9 +55,20 @@ $(document).ready(function(){
 
     });
 
-    $('.button3').click(function(){
-        $('#row_wrapper').css('flex-direction', 'column');
-        $('.code p').remove();
-        $('.code').prepend("<p>" + rwdf + "<br>" +"column-wrapper{flex-direction:column}" +  "</p>");
-    });
+
+
+
+    //only allow button 3 to work if button 1 is active aka the container is flex
+    if ($('.button1').hasClass('flextoggle_active')){
+        $('.button3').click(function(){
+            {
+                //do stuff
+                $('#row_wrapper').className.remove();
+
+                //$('.code p').remove();
+                //$('.code').prepend("<p>" + rwdf + "<br>" +"column-wrapper{flex-direction:column}" +  "</p>");
+            }
+        });
+
+    }
 });
