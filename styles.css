@@ -115,6 +115,7 @@ body {
   background: #bb2233; }
 
 .legend_item_wrapper {
-  display: flex; }
+  display: flex;
+  margin-top: 10px; }
 
 /*# sourceMappingURL=styles.css.map */
