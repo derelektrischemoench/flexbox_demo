@@ -5,7 +5,7 @@ $(document).ready(function(){
     var cwdb = "#column_wrapper:{display:block}";
     var cwdf = "#column_wrapper:{display:flex}";
     var fdc = "#row_wrapper:{flex-direction:column}";
-    var rw = "#row-wrapper";
+    var rw = "#row_wrapper";
     var cw = "#column_wrapper";
 
 
@@ -28,10 +28,12 @@ $(document).ready(function(){
 
         if($('#row_wrapper').hasClass('isFlexRow')){
             //TODO: this below displays the css dynamically
-            $('.code ').prepend("<p>" + rw + "{display:"+ $('#row_wrapper').css('display') + "}" + "</p>");
+            $('.code ').prepend("<p>" + rw + "{display:"+ $('#row_wrapper').css('display') + "}<br>" +
+                                        cw + "{display:"+ $('#column_wrapper').css('display') +"}"+ "</p>");
         }
 
-        else ($('.code ').prepend("<p>" + rw + "{display:"+ $('#row_wrapper').css('display') + "}" + "</p>"));
+        else ($('.code ').prepend("<p>" +   rw + "{display:"+ $('#row_wrapper').css('display') + "}<br>" +
+                                            cw + "{display:"+ $('#column_wrapper').css('display') +"}"+"</p>"));
 
     });
 
