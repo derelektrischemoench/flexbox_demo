@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 
 
-   $('.code p').prepend("<p>" + rwdb + "<br>" + cwdb);
+   $('.code p').prepend(rwdb + "<br>" + cwdb);
 
     $('.button1').click(function () {
         $('.code p').remove();
@@ -23,18 +23,15 @@ $(document).ready(function(){
     $('.button2').click(function () {
 
         if($('#row_wrapper').hasClass('isFlexRow')){
-            //empty the code box
-            //$('.code p').remove();TODO: fix this, this emptys the box all the time
-            //do stuff aka only enable button two if container is flex
+            $('.code p').remove();
             $('#column_wrapper').toggleClass('isFlexColumn');
-            $('.code p').prepend("<p>" + rwdf + "<br>" + cwdf + "</p>");
 
-            if($('#column_wrapper').hasClass('is FlexColumn')){
+            if($('#column_wrapper').hasClass('isFlexColumn')){
                 $('.code').prepend("<p>" + rwdf + "<br>" + cwdf + "</p>");
             }
             else {
-                //$('.code p').remove();
-                //$('.code').prepend("<p>" + rwdf + "<br>" + cwdb + "</p>");
+                $('.code p').remove();
+                $('.code').prepend("<p>" + rwdf + "<br>" + cwdb + "</p>");
             }
         }
 
