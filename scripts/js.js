@@ -4,6 +4,7 @@ $(document).ready(function(){
     var rwdf = "#row_wrapper:{display:flex}";
     var cwdb = "#column_wrapper:{display:block}";
     var cwdf = "#column_wrapper:{display:flex}";
+    var fdc = "#row_wrapper:{flex-direction:column}";
 
 
 
@@ -48,5 +49,11 @@ $(document).ready(function(){
             //do nothing
         }
 
+    });
+
+    $('.button3').click(function(){
+        $('#row_wrapper').css('flex-direction', 'column');
+        $('.code p').remove();
+        $('.code').prepend("<p>" + rwdf + "<br>" +"column-wrapper{flex-direction:column}" +  "</p>");
     });
 });
