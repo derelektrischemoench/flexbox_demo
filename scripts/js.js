@@ -11,6 +11,7 @@ $(document).ready(function(){
 
     $('.button1').click(function () {
         $('.code p').remove();
+        $('.button1').toggleClass('flextoggle_active');
         $('#row_wrapper').toggleClass('isFlexRow');
 
         if($('#row_wrapper').hasClass('isFlexRow')){
@@ -25,6 +26,7 @@ $(document).ready(function(){
         if($('#row_wrapper').hasClass('isFlexRow')){
             $('.code p').remove();
             $('#column_wrapper').toggleClass('isFlexColumn');
+            $('.button2').toggleClass('flextoggle_active');
 
             if($('#column_wrapper').hasClass('isFlexColumn')){
                 $('.code').prepend("<p>" + rwdf + "<br>" + cwdf + "</p>");
