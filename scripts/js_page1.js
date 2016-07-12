@@ -57,5 +57,6 @@ $(document).ready(function(){
     $('.button3').click(function () {
         $('#column_wrapper').css('flex-direction', 'row');
         $('.box1, .box2').css('align-self', 'center');
+        $('.code p').append("<br>" + "#column_wrapper{flex-direction: " + $('#column_wrapper').css('flex-direction')+"}");
     })
 });
