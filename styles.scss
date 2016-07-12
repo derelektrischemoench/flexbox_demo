@@ -188,3 +188,20 @@ h2 {
 .wrap {
   flex-wrap:wrap;
 }
+
+#row_wrapper3 {
+  width: 450px;
+  height: 450px;
+  background: $background;
+  border:5px solid $row_wrapper;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#column_wrapper3 {
+  border: 3px solid $buttons;
+  display: flex;
+  flex-direction: row;
+  /*flex-wrap: nowrap;*/
+}
