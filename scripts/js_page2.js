@@ -4,13 +4,7 @@
 $(document).ready(function () {
 
     //$('.code p').prepend("<span class='heading'><h2>Flex-Wrap</h2></span>");
-    $('.code p').prepend( "#column_wrapper{display:" + $('#column_wrapper').css('display') +"}<br>" );
-
-    if ( $("#column_wrapper2").css('row-wrap', 'wrap') ){
-      $('.code p').prepend("#column_wrapper{row-wrap:" + $('#column_wrapper').css('row-wrap') +"}<br>")
-    }
-
-
+    $('.code p').prepend( "#column_wrapper{display:" + $('#column_wrapper2').css('display') +"}<br>" );
 
 
     $('.code p').append( "#column_wrapper{flex-wrap:" + $('#column_wrapper2').css('flex-wrap') + "}");
@@ -25,5 +19,10 @@ $(document).ready(function () {
     $('.button2').click(function () {
         //$('#column_wrapper2').css('flex-wrap','wrap');
         $('#column_wrapper2').toggleClass('wrap');
+        $('.code p').remove();
+        $('.code').append(
+            "<p> #column-wrapper {display:" + $("#column_wrapper2").css("display") + "}<br>"+
+            "#column_wrapper{" + "flex-wrap: " + $('.wrap').css('flex-wrap') + "}</p>"
+        );
     });
 });
