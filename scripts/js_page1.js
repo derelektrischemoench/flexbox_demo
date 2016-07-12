@@ -54,9 +54,14 @@ $(document).ready(function(){
 
     });
 
-    $('.button3').click(function () {
-        $('#column_wrapper').css('flex-direction', 'row');
-        $('.box1, .box2').css('align-self', 'center');
-        $('.code p').append("<br>" + "#column_wrapper{flex-direction: " + $('#column_wrapper').css('flex-direction')+"}");
+
+   $('.button3').click(function () {
+
+        if( $('#column_wrapper').css('flex-direction', 'column') ) {
+                $('#column_wrapper').css('flex-direction', 'row');
+                $('.box1, .box2').css('align-self', 'center');
+                $('.code p').append("<br>" + "#column_wrapper{flex-direction: " + $('#column_wrapper').css('flex-direction') + "}" +
+                                    "<br>" + ".box1, .box2 {align-self:" + $('.box1').css('align-self') + "}"       );
+        }
     })
 });
