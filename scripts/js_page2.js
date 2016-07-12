@@ -22,6 +22,14 @@ $(document).ready(function () {
     });
 
     $('.button2').click(function () {
-        $('#column_wrapper2').css("flex-wrap", "wrap");
-    })
+
+         if(  ('#column_wrapper2').css('flex-wrap','wrap')  ){
+            $('#column_wrapper2').css('flex-wrap','nowrap');
+        }
+
+        else {
+            $('#column_wrapper2').css('flex-wrap', 'wrap')
+        }
+
+    });
 });
