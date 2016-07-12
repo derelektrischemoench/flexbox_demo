@@ -16,8 +16,19 @@ body {
   margin: 0;
 }
 
+a{
+  text-decoration: none;
+}
+
+h2 {
+  text-align: center;
+  font-family:'Open sans', sans-serif;
+}
+
+
+
 /*DON'T TOUCH THIS!*/
-#flex_container {
+.flex_container {
 
   margin-top: 50px;
   margin-bottom: 50px;
@@ -155,4 +166,21 @@ body {
 .legend_item_wrapper {
   display: flex;
   margin-top: 10px;
+}
+
+#row_wrapper2 {
+  width: 450px;
+  height: 450px;
+  background: $background;
+  border:5px solid $row_wrapper;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#column_wrapper2 {
+  border: 3px solid $buttons;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }

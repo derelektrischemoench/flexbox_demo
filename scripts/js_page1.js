@@ -11,7 +11,7 @@ $(document).ready(function(){
    $('.code p').prepend(rw + "{display:" + $('#row_wrapper').css('display') + "} <br>" +
                         cw + "{display:" + $('#column_wrapper').css('display') + "}");
 
-    $('.button1').click(function () {
+   $('.button1').click(function () {
         $('.code p').remove();
         $('.button1').toggleClass('flextoggle_active');
         $('#row_wrapper').toggleClass('isFlexRow');
@@ -24,7 +24,7 @@ $(document).ready(function(){
         }
 
         if($('#row_wrapper').hasClass('isFlexRow')){
-            //TODO: this below displays the css dynamically
+            //this below displays the css dynamically aka gets it directly from the dom
             $('.code ').prepend("<p>" + rw + "{display:"+ $('#row_wrapper').css('display') + "}<br>" +
                                         cw + "{display:"+ $('#column_wrapper').css('display') +"}"+ "</p>");
         }
@@ -33,8 +33,7 @@ $(document).ready(function(){
                                             cw + "{display:"+ $('#column_wrapper').css('display') +"}"+"</p>"));
 
     });
-
-    $('.button2').click(function () {
+   $('.button2').click(function () {
         if($('#row_wrapper').hasClass('isFlexRow')){
             $('.code p').remove();
             $('#column_wrapper').toggleClass('isFlexColumn');
@@ -46,8 +45,6 @@ $(document).ready(function(){
             else {
                 $('.code p').remove();
                 $('.code').prepend("<p>" + rwdf + "<br>" + cwdb + "</p>");
-
-
             }
         }
 
