@@ -12,19 +12,19 @@ $(document).ready(function(){
 
     toggleJustifyContent=function () {
 
-        if(!$('.legende').hasClass('moep')){
+        if($('.legende').hasClass('stage1')){
             $('#column_wrapper3').addClass('jcsa');
             $('.code p').remove();
             $('.code').append(
                 "<p> #column-wrapper {display:" + $("#column_wrapper3").css("display") + "}<br>" +
                 "#column-wrapper {justify-content:" + $("#column_wrapper3").css("justify-content") + "}</p>"
             );
-            $('.legende').addClass('moep');
-
-            console.log('function called');
+            $('.legende').removeClass('stage1');
+            $('.legende').addClass('stage2');
         }
 
-        else {
+        else if ( $('.legende').hasClass('stage2') ) {
+
             $('#column_wrapper3').removeClass('jcsa');
             $('#column_wrapper3').addClass('jcsb');
             $('.code p').remove();
@@ -32,6 +32,8 @@ $(document).ready(function(){
                 "<p> #column-wrapper {display:" + $("#column_wrapper3").css("display") + "}<br>" +
                 "#column-wrapper {justify-content:" + $("#column_wrapper3").css("justify-content") + "}</p>"
             );
+            $('.legende').removeClass('stage1');
+            $('.legende').addClass('stage2');
         }
 
     };
