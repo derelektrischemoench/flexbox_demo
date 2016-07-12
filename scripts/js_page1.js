@@ -53,4 +53,9 @@ $(document).ready(function(){
         }
 
     });
+
+    $('.button3').click(function () {
+        $('#column_wrapper').css('flex-direction', 'row');
+        $('.box1, .box2').css('align-self', 'center');
+    })
 });
