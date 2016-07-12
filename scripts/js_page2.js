@@ -16,20 +16,14 @@ $(document).ready(function () {
     $('.code p').append( "#column_wrapper{flex-wrap:" + $('#column_wrapper2').css('flex-wrap') + "}");
 
 
-
+    //this button adds boxes to the flex container
     $('.button1').click(function () {
         $('#column_wrapper2').prepend("<div class='box1'></div>");
     });
 
+    //this button toggles the flex-wrap abilities
     $('.button2').click(function () {
-
-         if(  ('#column_wrapper2').css('flex-wrap','wrap')  ){
-            $('#column_wrapper2').css('flex-wrap','nowrap');
-        }
-
-        else {
-            $('#column_wrapper2').css('flex-wrap', 'wrap')
-        }
-
+        //$('#column_wrapper2').css('flex-wrap','wrap');
+        $('#column_wrapper2').toggleClass('wrap');
     });
 });
