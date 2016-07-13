@@ -1,3 +1,5 @@
+//TODO: the button doesn't toggle all the stages, fix it
+
 $(document).ready(function(){
 
     var display = $('#column_wrapper4').css('display');
@@ -12,14 +14,14 @@ $(document).ready(function(){
 
     var toggleJustifyContent=function () {
 
-            if ($('.legende').hasClass('stage1')) {
+            if ($('#column_wrapper4').hasClass('jcc')) {
                 $('#column_wrapper4').addClass('jcsa');
                 $('.code p').remove();
                 $('.code').append(
                     "<p> #column-wrapper {display:" + $("#column_wrapper4").css("display") + "}<br>" +
                     "#column-wrapper {justify-content:" + $("#column_wrapper4").css("justify-content") + "}</p>"
                 );
-                $('.legende').removeClass('stage1');
+                $('#column_wrapper4').removeClass('jcc');
                 $('.legende').addClass('stage2');
             }
 
@@ -39,7 +41,7 @@ $(document).ready(function(){
             //adn now for justify-content center
             else if ($('.legende').hasClass('stage3')) {
                 $('#column_wrapper4').removeClass('jcsb');
-                $('#column_wrapper4').addClass('jcsc');
+                $('#column_wrapper4').addClass('jcc');
                 $('.code p').remove();
                 $('.code').append(
                     "<p> #column-wrapper {display:" + $("#column_wrapper4").css("display") + "}<br>" +
@@ -50,7 +52,7 @@ $(document).ready(function(){
             }
 
             else if ($('.legende').hasClass('stage4')) {
-                $('#column_wrapper4').removeClass('jcsc');
+                $('#column_wrapper4').removeClass('jcc');
                 $('#column_wrapper4').addClass('jcfe');
                 $('.code p').remove();
                 $('.code').append(
@@ -58,7 +60,7 @@ $(document).ready(function(){
                     "#column-wrapper {justify-content:" + $("#column_wrapper4").css("justify-content") + "}</p>"
                 );
                 $('.legende').removeClass('stage4');
-                $('.legende').addClass('stage5');
+                $('.legende').addClass('stage1');
             }
 
 
