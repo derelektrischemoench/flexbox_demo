@@ -83,6 +83,12 @@ h2 {
   background-color: #a1a;
   margin: 10px; }
 
+.box3 {
+  width: 100px;
+  height: 100px;
+  background-color: #a1a;
+  margin: 10px; }
+
 .buttons {
   display: flex;
   justify-content: flex-start;

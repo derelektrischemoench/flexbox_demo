@@ -7,10 +7,13 @@ $(document).ready(function () {
     $('.code p').append( "#column_wrapper{justify-content:" + justify + "}");
 
     //this button adds boxes to the flex container
-    var count=0;
+    var count=2;
     var addShit=function() {
-        console.log(count);
+        //console.log(count);
             $('#column_wrapper4').prepend("<div class='box" +count+"'></div>");
+
+            console.log( $('#column_wrapper4').children('div').attr("class") );
+
         count++;
 
     };
