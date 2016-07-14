@@ -58,11 +58,19 @@ $(document).ready(function(){
        ( $('#column_wrapper') ).toggleClass('fdr');
        updateDisplay();
     });
+    
+    $('.button4').click(function () {
+       toggleAlignSelf(); 
+    });
 
-    var updateDisplay = function () {
+   var updateDisplay = function () {
        $('.code p').remove();
         $('.code').prepend(
             "<p>#column-wrapper:{flex-direction:" + cwFlexState + "}</p>"
         )
+    };
+   
+    var toggleAlignSelf = function () {
+        
     }
 });
