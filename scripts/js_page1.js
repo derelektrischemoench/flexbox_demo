@@ -71,6 +71,6 @@ $(document).ready(function(){
     };
    
     var toggleAlignSelf = function () {
-        
+        //todo:make each of the children align itself
     }
 });
