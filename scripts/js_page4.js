@@ -11,8 +11,6 @@ $(document).ready(function () {
     var rwFlexState = $('#row_wrapper4').css('flex-direction');
     var jcState = $('#row_wrapper4').css('justify-content');
 
-
-
     $('.code p').prepend( "#column_wrapper{display:" + cwDisplayState +"}<br>" );
     $('.code p').append( "#row_wrapper{justify-content:" + jcState + "}<br>");
     $('.code p').append(".child1{flex:" + flex1 + "}");
@@ -26,21 +24,37 @@ $(document).ready(function () {
         count++;
     };
 
-    //change flex properties of children
-    var toggleFlex=function () {
-        $('.box1').toggleClass('fg1');
-    };
-
     $('.button1').click(function () {
         addShit();
     });
 
     $('.button2').click(function () {
         toggleFlex();
+        updateDisplay();
+    });
+
+    var updateDisplay = function () {
         $('.code p').remove();
         $('.code').prepend(
-            "<p>" + justify + getFlexProperty1 + "</p>"
+            "<p>#column_wrapper{display:" + getColumnWrapperFlexState() + "}<br>" +
+            ".box1{flex-grow:" + getChild1FlexState() + "}</p>"
         )
-    });
+    };
+
+    //change flex properties of children
+    var toggleFlex=function () {
+        $('.box1').toggleClass('fg1');
+    };
+
+    //get the columnWrapper Flex-state
+    var getColumnWrapperFlexState = function () {
+        return( $('#column_wrapper4').css('display') );
+    };
+
+    var getChild1FlexState = function () {
+        return( $('.box1').css('flex-grow') );
+    }
+
+
 
 });
