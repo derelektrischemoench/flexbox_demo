@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
     var rwdb = "#row_wrapper:{display:block}";
-
     var rwdf = "#row_wrapper:{display:flex}";
     var cwdb = "#column_wrapper:{display:block}";
     var cwdf = "#column_wrapper:{display:flex}";

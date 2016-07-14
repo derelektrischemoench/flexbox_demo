@@ -5,10 +5,16 @@ $(document).ready(function () {
     var flex2 = $('.box2').css('flex-grow');
     var getFlexProperty1 = $('.box1').css('flex-grow');
 
+    var cwDisplayState = $('#column_wrapper4').css('display');
+    var rwDisplayState =  $('#row_wrapper4').css('display');
+    var cwFlexState = $('#column_wrapper4').css('flex-direction');
+    var rwFlexState = $('#row_wrapper4').css('flex-direction');
+    var jcState = $('#row_wrapper4').css('justify-content');
 
 
-    $('.code p').prepend( "#column_wrapper{display:" + display +"}<br>" );
-    $('.code p').append( "#column_wrapper{justify-content:" + justify + "}<br>");
+
+    $('.code p').prepend( "#column_wrapper{display:" + cwDisplayState +"}<br>" );
+    $('.code p').append( "#row_wrapper{justify-content:" + jcState + "}<br>");
     $('.code p').append(".child1{flex:" + flex1 + "}");
 
     //this button adds boxes to the flex container
@@ -35,7 +41,6 @@ $(document).ready(function () {
         $('.code').prepend(
             "<p>" + justify + getFlexProperty1 + "</p>"
         )
-
-    })
+    });
 
 });
