@@ -58,19 +58,28 @@ $(document).ready(function(){
        ( $('#column_wrapper') ).toggleClass('fdr');
        updateDisplay();
     });
-    
-    $('.button4').click(function () {
-       toggleAlignSelf(); 
+
+   $('.button4').click(function () {
+       toggleAlignSelf('1');
+   });
+
+    $('.button5').click(function () {
+        toggleAlignSelf('2');
     });
+
 
    var updateDisplay = function () {
        $('.code p').remove();
         $('.code').prepend(
             "<p>#column-wrapper:{flex-direction:" + cwFlexState + "}</p>"
         )
-    };
-   
-    var toggleAlignSelf = function () {
-        //todo:make each of the children align itself
+   };
+    
+   var toggleAlignSelf = function (boxNr) {
+        console.log("button presses");
+        //todo:make each of the children align themself
+        if( $('#column_wrapper').hasClass('isFlexColumn') ){
+            $('.box'+ boxNr).toggleClass('asc');
+        }
     }
 });
