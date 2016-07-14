@@ -7,6 +7,7 @@ $(document).ready(function(){
     var fdc = "#row_wrapper:{flex-direction:column}";
     var rw = "#row_wrapper";
     var cw = "#column_wrapper";
+    var cwFlexState = $('#column_wrapper').css('flex-direction');
 
    $('.code p').prepend(rw + "{display:" + $('#row_wrapper').css('display') + "} <br>" +
                         cw + "{display:" + $('#column_wrapper').css('display') + "}");
@@ -47,21 +48,21 @@ $(document).ready(function(){
                 $('.code').prepend("<p>" + rwdf + "<br>" + cwdb + "</p>");
             }
         }
-
         else{
             //do nothing
         }
-
     });
 
 
    $('.button3').click(function () {
+       ( $('#column_wrapper') ).toggleClass('fdr');
+       updateDisplay();
+    });
 
-        if( $('#column_wrapper').css('flex-direction', 'column') ) {
-                $('#column_wrapper').css('flex-direction', 'row');
-                $('.box1, .box2').css('align-self', 'center');
-                $('.code p').append("<br>" + "#column_wrapper{flex-direction: " + $('#column_wrapper').css('flex-direction') + "}" +
-                                    "<br>" + ".box1, .box2 {align-self:" + $('.box1').css('align-self') + "}"       );
-        }
-    })
+    var updateDisplay = function () {
+       $('.code p').remove();
+        $('.code').prepend(
+            "<p>#column-wrapper:{flex-direction:" + cwFlexState + "}</p>"
+        )
+    }
 });

@@ -94,7 +94,7 @@ h2 {
   justify-content: flex-start;
   flex-direction: column; }
 
-.button1, .button2, .button3 {
+.button1, .button2, .button3, .button4 {
   padding: 5px 20px;
   background-color: #bb2233;
   color: white;
@@ -111,7 +111,7 @@ h2 {
   -moz-box-shadow: 5px -5px 4px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 5px -5px 4px 0px rgba(0, 0, 0, 0.75); }
 
-.button2, .button3 {
+.button2, .button3, .button4 {
   margin-top: 20px; }
 
 .legende {
@@ -199,5 +199,11 @@ h2 {
 
 .fg1 {
   flex-grow: 1; }
+
+.fdc {
+  flex-direction: column; }
+
+.fdr {
+  flex-direction: row; }
 
 /*# sourceMappingURL=styles.css.map */
