@@ -101,17 +101,19 @@ $(document).ready(function(){
             $('.box' + boxNr).addClass('triggered1');
             $('.box' + boxNr).removeClass('isFlexColumn');
         }
-        if ( $('.box'+boxNr).hasClass('triggered1') ){
-            $( $('.box'+boxNr) ).removeClass('asc');
+        else if ( $('.box'+boxNr).hasClass('triggered1') ){
+            $('.box' + boxNr).removeClass('asc');
             $('.box' + boxNr).removeClass('triggered1');
             $('.box' + boxNr).addClass('asfe');
             $('.box' + boxNr ).addClass('triggered2');
         }
-        if ( $('.box'+boxNr).hasClass('triggered2') ){
+        else if( $('.box'+boxNr).hasClass('triggered2') ){
             $('.box' + boxNr).removeClass('asfe');
+            $('.box' + boxNr).removeClass('triggered2');
             $('.box' + boxNr).removeClass('triggered2');
             $('.box' + boxNr).addClass('asfs');
             $('.box' + boxNr).addClass('isFlexColumn');
         }
+        else{ console.log("you done fucked up now!") }
     }
 });
