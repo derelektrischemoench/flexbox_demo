@@ -97,7 +97,21 @@ $(document).ready(function(){
     var toggleAlignSelf = function (boxNr) {
         
         if( $('#column_wrapper').hasClass('isFlexColumn') ){
-            $('.box'+ boxNr).toggleClass('asc');
+            $('.box' + boxNr).addClass('asc');
+            $('.box' + boxNr).addClass('triggered1');
+            $('.box' + boxNr).removeClass('isFlexColumn');
+        }
+        if ( $('.box'+boxNr).hasClass('triggered1') ){
+            $( $('.box'+boxNr) ).removeClass('asc');
+            $('.box' + boxNr).removeClass('triggered1');
+            $('.box' + boxNr).addClass('asfe');
+            $('.box' + boxNr ).addClass('triggered2');
+        }
+        if ( $('.box'+boxNr).hasClass('triggered2') ){
+            $('.box' + boxNr).removeClass('asfe');
+            $('.box' + boxNr).removeClass('triggered2');
+            $('.box' + boxNr).addClass('asfs');
+            $('.box' + boxNr).addClass('isFlexColumn');
         }
     }
 });
