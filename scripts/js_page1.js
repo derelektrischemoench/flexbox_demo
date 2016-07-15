@@ -1,3 +1,8 @@
+/*TODO:I probably have to manually inject the display-flex properties to the dom
+instead of assigning a class and  then manually toggle the class because since I
+assign the align-self properties via class I can't automatically get the align-self of an item
+at any time since the align-self property gets assigned via class. So if the item doesn't have the
+class I can't get it. FML*/
 $(document).ready(function(){
 
     var rwdb = "#row_wrapper:{display:block}";
