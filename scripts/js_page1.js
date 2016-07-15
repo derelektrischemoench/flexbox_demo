@@ -11,6 +11,8 @@ $(document).ready(function(){
     var rwDisplayState =  $('#row_wrapper').css('display');
     var cwFlexState = $('#column_wrapper').css('flex-direction');
     var rwFlexState = $('#row_wrapper').css('flex-direction');
+    var alignSelfStateBox1 = $('.box1').css('align-self');
+    var alignSelfStateBox2 = $('.box2').css('align-self');
 
    $('.code p').prepend(rw + "{display:" + rwDisplayState + "}<br>" +
                         cw + "{display:" + cwDisplayState + "}");
@@ -60,22 +62,30 @@ $(document).ready(function(){
        updateDisplay();
     });
    $('.button4').click(function () {
+       //argument = Boxnumber
        toggleAlignSelf('1');
+       updateDisplay();
    });
     $('.button5').click(function () {
+        //Argument = Boxnumber
         toggleAlignSelf('2');
+        updateDisplay();
     });
 
 
    var updateDisplay = function () {
        $('.code p').remove();
         $('.code').prepend(
-            "<p>#column-wrapper:{flex-direction:" + cwFlexState + "}</p>"
-        )
+            "<p>#column-wrapper:{flex-direction:" + cwFlexState + "}<br>" +
+            ".box1:{align-self:" + alignSelfStateBox1 + "}<br>" +
+            ".box2:{align-self:" + alignSelfStateBox2 + "}</p>"
+        );
+       console.log(alignSelfStateBox1,alignSelfStateBox2);
    };
     
    var toggleAlignSelf = function (boxNr) {
-        console.log("button presses");
+       //this changes the align-self property taking the box number (box1 or box2 as a parameter)
+       //the problem is that the class has the align.self property not the box
         if( $('#column_wrapper').hasClass('isFlexColumn') ){
             $('.box'+ boxNr).toggleClass('asc');
         }
