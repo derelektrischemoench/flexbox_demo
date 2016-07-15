@@ -61,21 +61,41 @@ $(document).ready(function(){
     });
    $('.button4').click(function () {
        toggleAlignSelf('1');
+       updateDisplay();
    });
     $('.button5').click(function () {
         toggleAlignSelf('2');
+        updateDisplay();
     });
 
+    //Helper functions that return the status of the corresponding elements
+    var getFlexState = function (element) {
+        return( $(element).css('flex') );
+    };
 
-   var updateDisplay = function () {
-       $('.code p').remove();
+    var getFlexDirection = function (element) {
+        return( $(element).css('flex-direction') )
+    };
+
+    var getAlignmentState = function (element) {
+        return( $(element).css('align-self') );
+    };
+
+    //this updates the display box on top
+    var updateDisplay = function () {
+        $('.code p').remove();
         $('.code').prepend(
-            "<p>#column-wrapper:{flex-direction:" + cwFlexState + "}</p>"
+            "<p>#column-wrapper:{flex-direction:" + getFlexDirection( $('#column_wrapper') )   + "}<br>" +
+                "#row-wrapper : {flex-direction:" + getFlexDirection( $('#row_wrapper') ) + "}<br>" +
+                "#box1 : {align-self: " + getAlignmentState( $('.box1') ) + "}<br>" +
+                "#box2 : {align-self: " + getAlignmentState( $('.box2') ) + "}</p>"
         )
-   };
+    };
+
     
-   var toggleAlignSelf = function (boxNr) {
-        console.log("button presses");
+
+    var toggleAlignSelf = function (boxNr) {
+        
         if( $('#column_wrapper').hasClass('isFlexColumn') ){
             $('.box'+ boxNr).toggleClass('asc');
         }
