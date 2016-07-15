@@ -62,10 +62,21 @@ $(document).ready(function(){
             //do nothing
         }
     });
+    
+    //TODO: rewrite this to manually switch css properties and add them to the #column wrapper ID
    $('.button3').click(function () {
-       ( $('#column_wrapper') ).toggleClass('fdr');
+       if( $('.button2').hasClass('flextoggle_active') ){
+           $('#column_wrapper').removeClass('isFlexColumn');
+           $('#column_wrapper').css('flex-direction','column');
+       }
+       else{
+           //do the other thing
+       }
+       //( $('#column_wrapper') ).css('flex-direction','row');
        updateDisplay();
     });
+    
+    
    $('.button4').click(function () {
        //argument = Boxnumber
        toggleAlignSelf('1');

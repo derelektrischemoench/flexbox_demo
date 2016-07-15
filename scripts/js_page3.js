@@ -1,7 +1,10 @@
 //TODO: the button doesn't toggle all the stages, fix it
 
 $(document).ready(function(){
-
+    var cwDisplayState = $('#column_wrapper4').css('display');
+    var rwDisplayState =  $('#row_wrapper4').css('display');
+    var cwFlexState = $('#column_wrapper4').css('justify-content');
+    var rwFlexState = $('#row_wrapper4').css('justify-content');
     var display = $('#column_wrapper4').css('display');
 
 
@@ -22,6 +25,7 @@ $(document).ready(function(){
                     "#column-wrapper {justify-content:" + $("#column_wrapper4").css("justify-content") + "}</p>"
                 );
                 $('#column_wrapper4').removeClass('jcc');
+                $('.legende').removeClass('jcsa');
                 $('.legende').addClass('stage2');
             }
 
@@ -70,4 +74,14 @@ $(document).ready(function(){
     $('.button2').click(function () {
         toggleJustifyContent();
     });
+
+    var updateDisplay = function () {
+        $('.code p').remove();
+        $('.code').prepend(
+            "<p>#column-wrapper:{flex-direction:" + cwFlexState + "}<br>" +
+            ".box1:{align-self:" + alignSelfStateBox1 + "}<br>" +
+            ".box2:{align-self:" + alignSelfStateBox2 + "}</p>"
+        );
+        console.log(alignSelfStateBox1,alignSelfStateBox2);
+    };
 });
