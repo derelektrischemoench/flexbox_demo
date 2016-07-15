@@ -95,6 +95,8 @@ $(document).ready(function(){
     
 
     var toggleAlignSelf = function (boxNr) {
+
+        /*this is supposed to toggle multiple status depending on which one was selected before button press*/
         
         if( $('#column_wrapper').hasClass('isFlexColumn') ){
             $('.box' + boxNr).addClass('asc');
