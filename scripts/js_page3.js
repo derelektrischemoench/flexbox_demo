@@ -1,4 +1,6 @@
 //TODO: the button doesn't toggle all the stages, fix it
+//this is because the class assignment and shit doesn't work properly
+//also todo: fix the display
 
 $(document).ready(function(){
     var cwDisplayState = $('#column_wrapper4').css('display');
@@ -8,24 +10,26 @@ $(document).ready(function(){
     var display = $('#column_wrapper4').css('display');
 
 
-    $('.code p').prepend( "#column_wrapper{display:" + display +"}<br>" );
-    $('.code p').append( "#column_wrapper{justify-content:flex-start}");
+    var updateDisplay = function () {
+        $('.code p').remove();
+        $('.code').prepend(
+            "<p>#column-wrapper:{justify-content:" + cwFlexState + "}</p>"
+        );
+    };
 
-    $('.button1').click(function () {
-        $('#column_wrapper4').prepend("<div class='box1'></div>");
-    });
+    //this needs to be called here so the content of the container gets
+    //treated at the correct moment
+    updateDisplay();
+
 
     var toggleJustifyContent=function () {
 
             if ($('#column_wrapper4').hasClass('jcc')) {
+                updateDisplay();
                 $('#column_wrapper4').addClass('jcsa');
-                $('.code p').remove();
-                $('.code').append(
-                    "<p> #column-wrapper {display:" + $("#column_wrapper4").css("display") + "}<br>" +
-                    "#column-wrapper {justify-content:" + $("#column_wrapper4").css("justify-content") + "}</p>"
-                );
                 $('#column_wrapper4').removeClass('jcc');
-                $('.legende').removeClass('jcsa');
+
+
                 $('.legende').addClass('stage2');
             }
 
@@ -33,11 +37,9 @@ $(document).ready(function(){
 
                 $('#column_wrapper4').removeClass('jcsa');
                 $('#column_wrapper4').addClass('jcsb');
-                $('.code p').remove();
-                $('.code').append(
-                    "<p> #column-wrapper {display:" + $("#column_wrapper4").css("display") + "}<br>" +
-                    "#column-wrapper {justify-content:" + $("#column_wrapper4").css("justify-content") + "}</p>"
-                );
+                
+                updateDisplay();
+                
                 $('.legende').removeClass('stage2');
                 $('.legende').addClass('stage3');
             }
@@ -46,11 +48,9 @@ $(document).ready(function(){
             else if ($('.legende').hasClass('stage3')) {
                 $('#column_wrapper4').removeClass('jcsb');
                 $('#column_wrapper4').addClass('jcc');
-                $('.code p').remove();
-                $('.code').append(
-                    "<p> #column-wrapper {display:" + $("#column_wrapper4").css("display") + "}<br>" +
-                    "#column-wrapper {justify-content:" + $("#column_wrapper4").css("justify-content") + "}</p>"
-                );
+                
+                updateDisplay();
+                
                 $('.legende').removeClass('stage3');
                 $('.legende').addClass('stage4');
             }
@@ -58,11 +58,9 @@ $(document).ready(function(){
             else if ($('.legende').hasClass('stage4')) {
                 $('#column_wrapper4').removeClass('jcc');
                 $('#column_wrapper4').addClass('jcfe');
-                $('.code p').remove();
-                $('.code').append(
-                    "<p> #column-wrapper {display:" + $("#column_wrapper4").css("display") + "}<br>" +
-                    "#column-wrapper {justify-content:" + $("#column_wrapper4").css("justify-content") + "}</p>"
-                );
+                
+                updateDisplay();
+                
                 $('.legende').removeClass('stage4');
                 $('.legende').addClass('stage1');
             }
@@ -70,18 +68,21 @@ $(document).ready(function(){
 
 
     };
+    var addBlock = function () {
+        $('#column_wrapper4').prepend("<div class='box1'></div>");
+    };
 
     $('.button2').click(function () {
         toggleJustifyContent();
     });
 
-    var updateDisplay = function () {
-        $('.code p').remove();
-        $('.code').prepend(
-            "<p>#column-wrapper:{flex-direction:" + cwFlexState + "}<br>" +
-            ".box1:{align-self:" + alignSelfStateBox1 + "}<br>" +
-            ".box2:{align-self:" + alignSelfStateBox2 + "}</p>"
-        );
-        console.log(alignSelfStateBox1,alignSelfStateBox2);
-    };
+    //add a block to the container
+    $('.button1').click(function () {
+        addBlock();
+    });
+
+
+
+
+
 });
