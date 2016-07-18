@@ -60,11 +60,11 @@ $(document).ready(function(){
        updateDisplay();
     });
    $('.button4').click(function () {
-       toggleAlignSelfBox1('1');
+       toggleAlignSelfBox1();
        updateDisplay();
    });
     $('.button5').click(function () {
-        toggleAlignSelfBox2('2');
+        toggleAlignSelfBox2();
         updateDisplay();
     });
 
@@ -94,52 +94,49 @@ $(document).ready(function(){
 
     
 
-    var toggleAlignSelfBox1 = function (boxNr) {
+    var toggleAlignSelfBox1 = function () {
 
         /*this is supposed to toggle multiple status depending on which one was selected before button press*/
         
-        if( $('#column_wrapper').hasClass('isFlexColumn') ){
-            $('.box' + boxNr).addClass('asc');
-            $('.box' + boxNr).addClass('triggered1');
-            $('.box' + boxNr).removeClass('isFlexColumn');
+        if( $('#column_wrapper').hasClass('triggerClass1') ){
+            $('.box1').addClass('asc');
+            $('.box1').addClass('triggered1');
+            $('.box1').removeClass('triggerClass1');
+            $('#column_wrapper').removeClass('triggerClass1');
         }
-        else if ( $('.box'+boxNr).hasClass('triggered1') ){
-            $('.box' + boxNr).removeClass('asc');
-            $('.box' + boxNr).removeClass('triggered1');
-            $('.box' + boxNr).addClass('asfe');
-            $('.box' + boxNr ).addClass('triggered2');
+        else if ( $('.box1').hasClass('triggered1') ){
+            $('.box1').removeClass('asc');
+            $('.box1').removeClass('triggered1');
+            $('.box1').addClass('asfe');
+            $('.box1').addClass('triggered2');
         }
-        else if( $('.box'+boxNr).hasClass('triggered2') ){
-            $('.box' + boxNr).removeClass('asfe');
-            $('.box' + boxNr).removeClass('triggered2');
-            $('.box' + boxNr).removeClass('triggered2');
-            $('.box' + boxNr).addClass('asfs');
-            $('.box' + boxNr).addClass('isFlexColumn');
+        else if( $('.box1').hasClass('triggered2') ){
+            $('.box1').removeClass('asfe');
+            $('.box1').removeClass('triggered2');
+            $('.box1').removeClass('triggered2');
+            $('.box1').addClass('asfs');
+            $('#column_wrapper').addClass('triggerClass1');
         }
         else{ console.log("you done fucked up now!") }
     };
 
-    var toggleAlignSelfBox2 = function (boxNr) {
-
-        /*this is supposed to toggle multiple status depending on which one was selected before button press*/
-
-        if( $('#column_wrapper').hasClass('isFlexColumn') ){
-            $('.box' + boxNr).addClass('asc');
-            $('.box' + boxNr).addClass('triggered1');
-            $('.box' + boxNr).removeClass('isFlexColumn');
+    var toggleAlignSelfBox2 = function () {
+        if( $('#column_wrapper').hasClass('triggerClass2') ){
+            $('.box2').addClass('asc');
+            $('.box2').addClass('triggered1');
+            $('#column_wrapper').removeClass('triggerClass2');
         }
-        else if ( $('.box'+boxNr).hasClass('triggered1') ){
-            $('.box' + boxNr).removeClass('asc');
-            $('.box' + boxNr).removeClass('triggered1');
-            $('.box' + boxNr).addClass('asfe');
-            $('.box' + boxNr ).addClass('triggered2');
+        else if ( $('.box2').hasClass('triggered1') ){
+            $('.box2').removeClass('asc');
+            $('.box2').removeClass('triggered1');
+            $('.box2').addClass('asfe');
+            $('.box2').addClass('triggered2');
         }
-        else if( $('.box'+boxNr).hasClass('triggered2') ){
-            $('.box' + boxNr).removeClass('asfe');
-            $('.box' + boxNr).removeClass('triggered2');
-            $('.box' + boxNr).removeClass('triggered2');
-            $('.box' + boxNr).addClass('asfs');
-            $('.box' + boxNr).addClass('isFlexColumn');
+        else if( $('.box2').hasClass('triggered2') ){
+            $('.box2').removeClass('asfe');
+            $('.box2').removeClass('triggered2');
+            $('.box2').addClass('asfs');
+            $('#column_wrapper').addClass('triggerClass2');
         }
         else{ console.log("you done fucked up now!") }
     }
