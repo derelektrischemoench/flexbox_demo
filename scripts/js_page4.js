@@ -29,7 +29,12 @@ $(document).ready(function () {
     });
 
     $('.button2').click(function () {
-        toggleFlex();
+        toggleFlexBox1();
+        updateDisplay();
+    });
+
+    $('.button3').click(function () {
+        toggleFlexBox2();
         updateDisplay();
     });
 
@@ -37,13 +42,18 @@ $(document).ready(function () {
         $('.code p').remove();
         $('.code').prepend(
             "<p>#column_wrapper{display:" + getColumnWrapperFlexState() + "}<br>" +
-            ".box1{flex-grow:" + getChild1FlexState() + "}</p>"
+            ".box1{flex-grow:" + getChild1FlexState() + "}<br>" +
+            ".box2{flex-grow:" + getChild2FlexState() + "}</p>"
         )
     };
 
     //change flex properties of children
-    var toggleFlex=function () {
+    var toggleFlexBox1=function () {
         $('.box1').toggleClass('fg1');
+    };
+
+    var toggleFlexBox2 = function () {
+        $('.box2').toggleClass('fg2');
     };
 
     //get the columnWrapper Flex-state
@@ -53,7 +63,12 @@ $(document).ready(function () {
 
     var getChild1FlexState = function () {
         return( $('.box1').css('flex-grow') );
-    }
+    };
+
+    var getChild2FlexState = function () {
+        return( $('.box2').css('flex-grow') );
+    };
+    
 
 
 

@@ -200,6 +200,9 @@ h2 {
 .fg1 {
   flex-grow: 1; }
 
+.fg2 {
+  flex-grow: 2; }
+
 .fdc {
   flex-direction: column; }
 
