@@ -230,12 +230,8 @@ h2 {
   flex-direction: row;
 }
 
-.jcsa {
-  justify-content: space-around;
-}
-
-.jcsb {
-  justify-content: space-between;
+.jcfs {
+  justify-content: flex-start;
 }
 
 .jcc {
@@ -245,6 +241,17 @@ h2 {
 .jcfe {
   justify-content: flex-end;
 }
+
+.jcsa {
+  justify-content: space-around;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+
+
 
 .fg1{
   flex-grow:1;
