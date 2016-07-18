@@ -19,7 +19,7 @@ $(document).ready(function () {
     var count=2;
     var addShit=function() {
         //console.log(count);
-            $('#column_wrapper4').prepend("<div class='box" +count+"'></div>");
+            $('#column_wrapper4').prepend("<div class='box" +count+"'>Box  "+count+"</div>");
             console.log( $('#column_wrapper4').children('div').attr("class") );
         count++;
     };
