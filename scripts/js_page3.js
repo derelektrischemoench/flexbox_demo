@@ -46,43 +46,6 @@ $(document).ready(function(){
                 columnWrapperState = 0;
                 break;
         }
-
-            /*if ($('#column_wrapper4').hasClass('jcc')) {
-
-                $('#column_wrapper4').addClass('jcsa');
-                $('#column_wrapper4').removeClass('jcc');
-                $('.legende').addClass('stage2');
-                updateDisplay();
-            }
-
-            else if ($('.legende').hasClass('stage2')) {
-
-                $('#column_wrapper4').removeClass('jcsa');
-                $('#column_wrapper4').addClass('jcsb');
-                $('.legende').removeClass('stage2');
-                $('.legende').addClass('stage3');
-                updateDisplay();
-            }
-
-            //adn now for justify-content center
-            else if ($('.legende').hasClass('stage3')) {
-                $('#column_wrapper4').removeClass('jcsb');
-                $('#column_wrapper4').addClass('jcc');
-                $('.legende').removeClass('stage3');
-                $('.legende').addClass('stage4');
-                updateDisplay();
-            }
-
-            else if ($('.legende').hasClass('stage4')) {
-                $('#column_wrapper4').removeClass('jcc');
-                $('#column_wrapper4').addClass('jcfe');
-                $('.legende').removeClass('stage4');
-                $('.legende').addClass('stage1');
-                updateDisplay();
-            }*/
-
-
-
     };
 
     var updateDisplay = function () {

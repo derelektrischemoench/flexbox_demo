@@ -21,9 +21,6 @@ $(document).ready(function () {
     };
 
 
-    /*$('.code p').prepend( "#column_wrapper{display:" + $('#column_wrapper2').css('display') +"}<br>" );
-    $('.code p').append( "#column_wrapper{flex-wrap:" + $('#column_wrapper2').css('flex-wrap') + "}");*/
-
 
     //this button adds boxes to the flex container
     $('.button1').click(function () {
