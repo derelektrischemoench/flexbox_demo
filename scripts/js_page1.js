@@ -60,11 +60,11 @@ $(document).ready(function(){
        updateDisplay();
     });
    $('.button4').click(function () {
-       toggleAlignSelf('1');
+       toggleAlignSelfBox1('1');
        updateDisplay();
    });
     $('.button5').click(function () {
-        toggleAlignSelf('2');
+        toggleAlignSelfBox2('2');
         updateDisplay();
     });
 
@@ -94,10 +94,35 @@ $(document).ready(function(){
 
     
 
-    var toggleAlignSelf = function (boxNr) {
+    var toggleAlignSelfBox1 = function (boxNr) {
 
         /*this is supposed to toggle multiple status depending on which one was selected before button press*/
         
+        if( $('#column_wrapper').hasClass('isFlexColumn') ){
+            $('.box' + boxNr).addClass('asc');
+            $('.box' + boxNr).addClass('triggered1');
+            $('.box' + boxNr).removeClass('isFlexColumn');
+        }
+        else if ( $('.box'+boxNr).hasClass('triggered1') ){
+            $('.box' + boxNr).removeClass('asc');
+            $('.box' + boxNr).removeClass('triggered1');
+            $('.box' + boxNr).addClass('asfe');
+            $('.box' + boxNr ).addClass('triggered2');
+        }
+        else if( $('.box'+boxNr).hasClass('triggered2') ){
+            $('.box' + boxNr).removeClass('asfe');
+            $('.box' + boxNr).removeClass('triggered2');
+            $('.box' + boxNr).removeClass('triggered2');
+            $('.box' + boxNr).addClass('asfs');
+            $('.box' + boxNr).addClass('isFlexColumn');
+        }
+        else{ console.log("you done fucked up now!") }
+    };
+
+    var toggleAlignSelfBox2 = function (boxNr) {
+
+        /*this is supposed to toggle multiple status depending on which one was selected before button press*/
+
         if( $('#column_wrapper').hasClass('isFlexColumn') ){
             $('.box' + boxNr).addClass('asc');
             $('.box' + boxNr).addClass('triggered1');
