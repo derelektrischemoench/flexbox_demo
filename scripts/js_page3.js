@@ -1,5 +1,3 @@
-//TODO: the button doesn't toggle all the stages, fix it
-//this is because the class assignment and shit doesn't work properly
 //also todo: fix the display
 
 $(document).ready(function(){
