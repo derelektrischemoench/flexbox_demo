@@ -15,19 +15,12 @@ $(document).ready(function(){
         );
     };
 
-    //this needs to be called here so the content of the container gets
-    //treated at the correct moment
-    updateDisplay();
-
-
     var toggleJustifyContent=function () {
 
             if ($('#column_wrapper4').hasClass('jcc')) {
                 updateDisplay();
                 $('#column_wrapper4').addClass('jcsa');
                 $('#column_wrapper4').removeClass('jcc');
-
-
                 $('.legende').addClass('stage2');
             }
 
@@ -72,6 +65,7 @@ $(document).ready(function(){
 
     $('.button2').click(function () {
         toggleJustifyContent();
+        updateDisplay();
     });
 
     //add a block to the container
