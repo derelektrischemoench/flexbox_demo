@@ -153,5 +153,5 @@ $(document).ready(function(){
             default:
                 break;
         }
-    }
+    };
 });

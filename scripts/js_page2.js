@@ -3,9 +3,26 @@
  */
 $(document).ready(function () {
 
-    //$('.code p').prepend("<span class='heading'><h2>Flex-Wrap</h2></span>");
-    $('.code p').prepend( "#column_wrapper{display:" + $('#column_wrapper2').css('display') +"}<br>" );
-    $('.code p').append( "#column_wrapper{flex-wrap:" + $('#column_wrapper2').css('flex-wrap') + "}");
+    $(window).ready(function () {
+        updateDisplay();
+    });
+
+    var getWrapState = function () {
+      return( $('#column_wrapper2').css('flex-wrap') );
+    };
+
+    var updateDisplay = function () {
+        $('.code p').remove();
+        $('.code').prepend(
+            "<p>#column_wrapper{display:" + getColumnWrapperFlexState() + "}<br>" +
+            ".box1{flex-grow:" + getChild1FlexState() + "}<br>" +
+            ".box2{flex-grow:" + getChild2FlexState() + "}</p>"
+        )
+    };
+
+
+    /*$('.code p').prepend( "#column_wrapper{display:" + $('#column_wrapper2').css('display') +"}<br>" );
+    $('.code p').append( "#column_wrapper{flex-wrap:" + $('#column_wrapper2').css('flex-wrap') + "}");*/
 
 
     //this button adds boxes to the flex container
@@ -22,5 +39,6 @@ $(document).ready(function () {
             "<p> #column-wrapper {display:" + $("#column_wrapper2").css("display") + "}<br>"+
             "#column_wrapper{" + "flex-wrap: " + $('.wrap').css('flex-wrap') + "}</p>"
         );
+        console.log(getWrapState());
     });
 });
