@@ -4,6 +4,12 @@ $(document).ready(function () {
         return( $('#column_wrapper5').css('display') );
     };
 
+    var getColumnWrapperFlexDirection = function () {
+        return( $('#column_wrapper5').css('flex-direction') );
+    };
+
+
+
     var getChild1FlexState = function () {
         return( $('.box1').css('flex-grow') );
     };
@@ -16,8 +22,9 @@ $(document).ready(function () {
         $('.code p').remove();
         $('.code').prepend(
             "<p>#column_wrapper{display:" + getColumnWrapperFlexState() + "}<br>" +
-            "#siteContent{flex-grow:" + getChild1FlexState() + "}<br>" +
-            "#sidebar{flex-grow:" + getChild2FlexState() + "}</p>"
+                "#column_wrapper{flex-direction:" + getColumnWrapperFlexDirection() + "}<br>" +
+                "#siteContent{flex-grow:" + getChild1FlexState() + "}<br>" +
+                "#sidebar{flex-grow:" + getChild2FlexState() + "}</p>"
         )
     };
 
@@ -31,8 +38,24 @@ $(document).ready(function () {
          $('.box1').toggleClass('hundredpercentheight');
     };
 
+    var toggleMobileView = function () {
+        $('#row_wrapper5').css('width','200px');
+        $('#column_wrapper5').css('flex-direction','column');
+        $('.box1, .box2').toggleClass('mobileview');
+
+        $('.code p').remove();
+        $('.code').prepend(
+            "<p>#column_wrapper{display:" + getColumnWrapperFlexState() + "}<br>" +
+            "#column_wrapper{flex-direction:" + getColumnWrapperFlexDirection() + "}<br>" +
+            "#siteContent{flex-grow:" + $('.box1').css('height') + "}<br>" +
+            "#sidebar{flex-grow:" + $('.box2').css('height') + "}<br>" +
+            "! The values for #sidebar and #site_content are width values but since we changed the direction of the container, thus rotating the alignment axis by 90°, width and height are changed</p>"
+        )
+    };
+
     $( '.button2' ).click(function () {
         updateDisplay();
+
     });
 
     $( '.button3' ).click(function () {
@@ -41,7 +64,7 @@ $(document).ready(function () {
     });
 
     $( '.button4' ).click(function () {
-        hundredpercentheight();
-        updateDisplay();
+        toggleMobileView();
+        //updateDisplay();
     });
 });
