@@ -13,7 +13,7 @@ $(document).ready(function () {
     //this button adds boxes to the flex container
     var count=2;
     var addShit=function() {
-            $('#column_wrapper4').prepend("<div class='box" +count+"'>Box  "+count+"</div>");
+            $('#column_wrapper4').prepend("<div class='box" +count+"'><p>Box  "+count+"</p></div>");
             console.log( $('#column_wrapper4').children('div').attr("class") );
         count++;
     };

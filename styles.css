@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import "https://fonts.googleapis.com/css?family=Cutive+Mono";
-@import "https://fonts.googleapis.com/css?family=Open+Sans:400,600";
 html {
   background: #aaa; }
 
@@ -196,7 +194,8 @@ h2 {
 #column_wrapper5 {
   border: 3px solid #bb2233;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  height: 100%; }
 
 .jcfs {
   justify-content: flex-start; }
@@ -244,5 +243,8 @@ div[class*=box] {
     display: flex;
     justify-content: center;
     flex-direction: column; }
+
+.hundredpercentheight {
+  height: 90%; }
 
 /*# sourceMappingURL=styles.css.map */
