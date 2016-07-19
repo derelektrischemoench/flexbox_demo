@@ -288,13 +288,16 @@ h2 {
   align-self: flex-end;
 }
 
-div[class*=box]{
-  color:white;
+div[class*=box] {
+  color: white;
   display: flex;
-  flex-direction: column;
-  align-content: center;
+  flex-direction: row;
+  justify-content: center;
+  line-height: 100%;
 
-  span{
-    align-self: center;
+  p{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 }

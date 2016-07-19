@@ -237,9 +237,12 @@ h2 {
 div[class*=box] {
   color: white;
   display: flex;
-  flex-direction: column;
-  align-content: center; }
-  div[class*=box] span {
-    align-self: center; }
+  flex-direction: row;
+  justify-content: center;
+  line-height: 100%; }
+  div[class*=box] p {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
 
 /*# sourceMappingURL=styles.css.map */
