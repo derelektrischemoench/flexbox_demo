@@ -241,6 +241,35 @@ h2 {
   height: 100%;
 }
 
+#row_wrapper6{
+  width: 850px;
+  height: 350px;
+  background: #333;
+  border:5px solid #fff;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 100px;
+
+
+  img {
+    align-self: center;
+    width: 100px;
+    height: 100px;
+  }
+
+
+}
+
+#column_wrapper6{
+  border: 3px solid #bb2233;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+
+}
+
 .jcfs {
   justify-content: flex-start;
 }
