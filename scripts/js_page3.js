@@ -5,6 +5,7 @@ $(document).ready(function(){
     var rwFlexState = $('#row_wrapper4').css('justify-content');
     var display = $('#column_wrapper4').css('display');
     var columnWrapperState = 0;
+    var blockCount=0;
 
 
 
@@ -58,8 +59,15 @@ $(document).ready(function(){
 
 
     var addBlock = function () {
-        $('#column_wrapper4').prepend("<div class='box1'></div>");
-        updateDisplay();
+
+        if(blockCount<2){
+            $('#column_wrapper4').prepend("<div class='box1'></div>");
+            updateDisplay();
+            blockCount++;
+        }
+        else {
+            alert("The container is full, you fucking cunt!")
+        }
     };
 
     var getFlexState = function (element) {
